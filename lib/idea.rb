@@ -21,8 +21,8 @@ class Idea
   end
 
   def self.raw_ideas
-    database.transaction do |db|
-      db['ideas'] || []
+    database.transaction do
+      database['ideas'] || []
     end
   end
 
